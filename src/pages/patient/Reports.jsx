@@ -3,7 +3,7 @@ import api from '../../services/api';
 
 const Reports = () => {
   const [reports, setReports] = useState([]);
-  const backend_url = import.meta.env.VITE_BACKEND_URL_PROD || import.meta.env.VITE_BACKEND_URL;
+  const backend_url = import.meta.env.VITE_BACKEND_URL;
 
   useEffect(() => {
     api.get('/reports').then(res => setReports(res.data));

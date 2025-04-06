@@ -5,7 +5,7 @@ const Documents = () => {
   const [documents, setDocuments] = useState([]);
   const [title, setTitle] = useState('');
   const [file, setFile] = useState(null);
-  const backend_url = import.meta.env.VITE_BACKEND_URL_PROD || import.meta.env.VITE_BACKEND_URL;
+  const backend_url = import.meta.env.VITE_BACKEND_URL;
 
   const fetchDocs = async () => {
     const res = await api.get('/documents');
